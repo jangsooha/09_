@@ -5,25 +5,21 @@
 
 int main(int argc, char *argv[]) {
 
-   char src[100] = "Programming course";
-   char dst[100];
-   int i=0;
-   int j=0;   //문자 수를 세는 변수
- 
+   FILE *fp;
+   char input[100];
+   int i;
 
-   while(src[i]!= '\0')
-  {
-    dst[i]=src[i];
-    i++;
-}
-   dst[i]= '\0';
+   fp = fopen("sample.txt", "w");
 
-   while(src[j] != 0)
-   {
-    j++;
+   for(i=0; i<3; i++)
+{
+   printf("input a word : ");
+   scanf("%s", input);
+   fprintf(fp, "%s\n", input);
 }
 
-   printf("%s (%i)", dst, j);
+
+   fclose(fp);
 
 	return 0;
 }
