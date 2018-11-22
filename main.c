@@ -8,16 +8,22 @@ int main(int argc, char *argv[]) {
    char src[100] = "Programming course";
    char dst[100];
    int i=0;
+   int j=0;   //문자 수를 세는 변수
+ 
 
    while(src[i]!= '\0')
   {
     dst[i]=src[i];
     i++;
 }
-
    dst[i]= '\0';
 
-   printf("%s\n", dst);
+   while(src[j] != 0)
+   {
+    j++;
+}
+
+   printf("%s (%i)", dst, j);
 
 	return 0;
 }
